@@ -1,2 +1,2 @@
-# Bootstrap3_Cotxox-FrontEnd
+# Cotxox-FrontEnd
 Basic HTML5, CSS3 &amp; Bootstap3
