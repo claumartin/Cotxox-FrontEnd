@@ -28,9 +28,7 @@ The tastk  has to be presented in a zip format and it has to contain a report wi
 * Cover
 * Index
 * Design outline.
-* Motivation: why un escrit explicant el perquè feu aquesta pàgina, podeu explicar des de
-que vos agrada el tema, a que esteu treballant a una empresa i un client vos ha
-demanat que la feu...
-* Explicació de les diferents pàgines web, quina és la funció de cadascuna d’elles
-* Components: heu d’indicar en quina part de les diferents pàgines apareix cada part
-que se vos està demanant, per exemple, el desplegable, les pestanyes...
+* Motivation: write your motivation to do this web application, how you chose the topic...
+* Explanation of the different web pages of the application and which function performs every one.
+* Components: indicate where are implemented the requirements.
+  
