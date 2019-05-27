@@ -24,7 +24,7 @@ Create a responsive view for Cotxox app.
 HTML5, CSS3, BOOTSTRAP 3 and optional JavaScript.
 
 ### How to present the task
-The tastk  has to be presented in a zip format and it has to contain a report with the followong content:
+The tastk  has to be presented in a zip format and it has to contain a report with the following content:
 * Cover
 * Index
 * Design outline.
