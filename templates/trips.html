@@ -6,8 +6,10 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Cotxox App</title>
 
-        <!-- Latest compiled and minified CSS from Bootstrap 3-->
+
+        <!-- Compiled and minified CSS from Bootstrap 3-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css">
 
         <!-- Customed css-->
         <link rel="stylesheet" href="../assets/css/styles.css">
@@ -27,11 +29,11 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Cotxox App</a>
+                    <a class="navbar-brand" href="index.html">Cotxox App</a>
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-user navbar-right">
-                        <li><a href="index.html"><span class="glyphicon glyphicon-user"></span><p id="output"></p></a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span><p id="output"></p></a></li>
                         <li><a href="#about"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
                     </ul>
                 </div>
@@ -43,7 +45,7 @@
             <a href="#" class="btn-expand-collapse"><span class="glyphicon glyphicon-menu-left"></span></a>
             <ul class="navbar-primary-menu">
                 <li>
-                    <a href="#"><span class="glyphicon glyphicon-list-alt"></span><span class="nav-label">My trips</span></a>
+                    <a href="trips.html"><span class="glyphicon glyphicon-list-alt"></span><span class="nav-label">My trips</span></a>
                     <a href="#"><span class="glyphicon glyphicon-map-marker"></span><span class="nav-label">Map</span></a>
                     <a href="#"><span class="glyphicon glyphicon-cog"></span><span class="nav-label">Settings</span></a>
                     <a href="#"><span class="glyphicon glyphicon-comment"></span><span class="nav-label">FAQ</span></a>
@@ -51,13 +53,14 @@
             </ul>
         </nav>
         <div class="container-fluid main-content titillium-font">
-            <h1> I am the main content </h1>
-            <table id="table" data-height="460">
+            <h1>Previous trips</h1>
+            <table id="table">
                 <thead>
                     <tr>
-                        <th data-field="id">Item ID</th>
-                        <th data-field="name">Item Name</th>
-                        <th data-field="price">Item Price</th>
+                        <th data-field="date">Date</th>
+                        <th data-field="start">Start point</th>
+                        <th data-field="end">Destination</th>
+                        <th data-field="price">Price</th>
                     </tr>
                 </thead>
             </table>
@@ -75,6 +78,9 @@
         </div>
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
 
         <!-- Latest compiled JavaScript from Bootstrap 3-->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
