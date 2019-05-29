@@ -32,3 +32,14 @@ $(function () {
         data: tripsData
     });
 });
+
+/*-----------------------------------------------------------------------------------------------------
+    Map
+------------------------------------------------------------------------------------------------------*/
+mapboxgl.accessToken = 'pk.eyJ1IjoiY2xhdW1hcnRpbiIsImEiOiJjanc4ZzVwcTQwNXhuNGFteDFrOWRycm9wIn0.e30PI6RcQZOcePMpzY1cWA';
+const map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/claumartin/cjw8g6dv203sd1bs6aycrlqrb',
+center: [2.317600, 48.866500],
+zoom: 12.0
+});
