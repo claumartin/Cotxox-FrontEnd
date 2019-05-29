@@ -6,8 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Cotxox App</title>
 
-
-        <!-- Compiled and minified CSS from Bootstrap -->
+        <!-- Latest compiled and minified CSS from Bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css">
 
@@ -29,11 +28,11 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">Cotxox App</a>
+                    <a class="navbar-brand" href="#">Cotxox App</a>
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-user navbar-right">
-                        <li><a href="#"><span class="glyphicon glyphicon-user"></span><p id="output"></p></a></li>
+                        <li><a href="index.html"><span class="glyphicon glyphicon-user"></span><p id="output"></p></a></li>
                         <li><a href="#about"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
                     </ul>
                 </div>
@@ -52,18 +51,15 @@
                 </li>
             </ul>
         </nav>
-        <div class="container-fluid main-content titillium-font">
-            <h1>Previous trips</h1>
-            <table id="table">
-                <thead>
-                    <tr>
-                        <th data-field="date">Date</th>
-                        <th data-field="start">Start point</th>
-                        <th data-field="end">Destination</th>
-                        <th data-field="price">Price</th>
-                    </tr>
-                </thead>
-            </table>
+        <div class="container-fluid main-content titillium-font settings-body">
+            <h1>Edit configurations</h1>
+            <form id="form" method="POST" action="settings_response.html">
+                <div class="row">
+                    <div class="col-md-2 pull-right mt-2">
+                        <input id="submit" type="submit" value="Save"></input>
+                    </div>
+                </div> 
+            </form>
         </div>
         <div class="footer navbar-fixed-bottom">
             <div class="container">

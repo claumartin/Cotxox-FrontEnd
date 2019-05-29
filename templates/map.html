@@ -49,7 +49,7 @@
                 <li>
                     <a href="trips.html"><span class="glyphicon glyphicon-list-alt"></span><span class="nav-label">My trips</span></a>
                     <a href="map.html"><span class="glyphicon glyphicon-map-marker"></span><span class="nav-label">Map</span></a>
-                    <a href="#"><span class="glyphicon glyphicon-cog"></span><span class="nav-label">Settings</span></a>
+                    <a href="settings.html"><span class="glyphicon glyphicon-cog"></span><span class="nav-label">Settings</span></a>
                     <a href="#"><span class="glyphicon glyphicon-comment"></span><span class="nav-label">FAQ</span></a>
                 </li>
             </ul>
@@ -78,6 +78,15 @@
         
         <!-- Map JavaScript -->
         <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoiY2xhdW1hcnRpbiIsImEiOiJjanc4ZzVwcTQwNXhuNGFteDFrOWRycm9wIn0.e30PI6RcQZOcePMpzY1cWA';
+            const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/claumartin/cjw8g6dv203sd1bs6aycrlqrb',
+            center: [2.317600, 48.866500],
+            zoom: 12.0
+            });
+        </script>
 
         <!-- Latest compiled JavaScript from Bootstrap 3-->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>

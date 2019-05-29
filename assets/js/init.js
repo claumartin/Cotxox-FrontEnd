@@ -6,15 +6,6 @@ $('.btn-expand-collapse').click(function(e) {
 });
 
 /*-----------------------------------------------------------------------------------------------------
-    Username
-------------------------------------------------------------------------------------------------------*/
-var username = "Sofía Lópex";
-
-window.onload = function(){
-    document.getElementById('output').innerHTML = username;
-};
-
-/*-----------------------------------------------------------------------------------------------------
     Previous trips table
 ------------------------------------------------------------------------------------------------------*/
 var $table = $('#table');
@@ -34,12 +25,159 @@ $(function () {
 });
 
 /*-----------------------------------------------------------------------------------------------------
-    Map
+    Settings form
 ------------------------------------------------------------------------------------------------------*/
-mapboxgl.accessToken = 'pk.eyJ1IjoiY2xhdW1hcnRpbiIsImEiOiJjanc4ZzVwcTQwNXhuNGFteDFrOWRycm9wIn0.e30PI6RcQZOcePMpzY1cWA';
-const map = new mapboxgl.Map({
-container: 'map',
-style: 'mapbox://styles/claumartin/cjw8g6dv203sd1bs6aycrlqrb',
-center: [2.317600, 48.866500],
-zoom: 12.0
-});
+var userData = {"Name": "Sofía Lópex", "Phone nuber": "857-333-1875", "Zip code": "02210", 
+                "Email": "wctf2ez5ri@claimab.com", 
+                "Address": "2892  Hummingbird Way", "City": "Boston",
+                "Gender": "Female", "Alerts": [true, false, true]};
+
+var genderOptions = ["Female", "Male", "Undefined", "Other"];
+
+var cityOptions = ["New York", "Boston", "Texas", "Springfield"];
+
+var alertOptions = ["Send me alert messages using my mobile phone number",
+                    "Send me alert messages using my email address",
+                    "Alert me by the app notifications"]
+
+window.onload = function() {
+
+    var username = "Sofía Lópex";
+    document.getElementById('output').innerHTML = username;
+
+    var externalDiv = document.createElement("div");
+    externalDiv.className = "row";
+
+    var form = document.getElementById("form");
+
+    if (form) {
+
+        for (pair in userData) {
+
+            if (pair == "Gender") {
+
+                var div = document.createElement("div");
+                div.className = "col-md-4 inputs";
+
+                var span = document.createElement("span");
+                span.innerHTML = pair;
+                span.className = "text-bold";
+                div.appendChild(span)
+
+                for (gender in genderOptions) {
+
+                    var divRadio = document.createElement("div");
+                    divRadio.className = "radio";
+                    
+                    var label = document.createElement("label");
+
+                    var radio = document.createElement("input");
+                    radio.name = "gender";
+                    radio.type = "radio";
+
+                    label.appendChild(radio);    
+                    label.appendChild(document.createTextNode(genderOptions[gender]));
+                    
+                    divRadio.appendChild(label);
+
+                    div.appendChild(divRadio);
+
+                    if (genderOptions[gender] == userData[pair]) {
+                        radio.defaultChecked = true;
+                    }
+                }
+
+                externalDiv.appendChild(div);
+            }
+
+            else if ( pair == "Alerts") {
+
+                var div = document.createElement("div");
+                div.className = "col-md-4 inputs";
+
+                var span = document.createElement("span");
+                span.innerHTML = pair;
+                span.className = "text-bold";
+                div.appendChild(span)
+
+                for (alert in alertOptions) {
+
+                    var divCheckbox = document.createElement("div");
+                    divCheckbox.className = "checkbox";
+                    
+                    var label = document.createElement("label");
+
+                    var checkbox = document.createElement("input");
+                    checkbox.type = "checkbox";
+
+                    label.appendChild(checkbox);    
+                    label.appendChild(document.createTextNode(alertOptions[alert]));
+                    
+                    divCheckbox.appendChild(label);
+
+                    div.appendChild(divCheckbox);
+
+                    if (userData["Alerts"][alert]) {
+                        checkbox.defaultChecked = true;
+                    }
+                }
+
+                externalDiv.appendChild(div);
+            }
+
+            else if (pair == "City") {
+
+                var div = document.createElement("div");
+                div.className = "col-md-4 inputs";
+
+                var span = document.createElement("span");
+                span.className = "text-bold";
+                span.innerHTML = pair;
+
+                div.appendChild(span);
+
+                var select = document.createElement("select");
+                select.className = "form-control";
+
+                for (city in cityOptions) {
+
+                    var option = document.createElement("option");
+                    option.appendChild(document.createTextNode(cityOptions[city]));
+
+                    select.appendChild(option);
+
+                    if (cityOptions[city] == userData[pair]) {
+                        select.selectedIndex = city;
+                    }
+                }
+
+                div.appendChild(select);
+
+                externalDiv.appendChild(div);
+            }
+            else {
+
+                var div = document.createElement("div");
+                div.className = "col-md-4 inputs";
+
+                var span = document.createElement("span");
+                span.innerHTML = pair;
+                span.className = "text-bold";
+                div.appendChild(span)
+
+                var br = document.createElement("br");
+                div.appendChild(br);
+
+                var input = document.createElement("input");
+                input.value = userData[pair];
+                div.appendChild(input);
+
+                externalDiv.appendChild(div);
+            }
+        }
+        form.insertBefore(externalDiv, form.firstChild);
+    }
+}
+
+
+
