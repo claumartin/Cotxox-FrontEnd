@@ -168,6 +168,25 @@
 /*-----------------------------------------------------------------------------------------------------
     Vertical collapsible sidebar
 ------------------------------------------------------------------------------------------------------*/
+@media (max-width: 768px) {
+
+    .navbar-primary  {
+        width: 60px !important;
+    }
+
+    .navbar-primary .glyphicon {
+        font-size: 22px;
+    }
+
+    .navbar-primary .nav-label {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 60px !important;
+    }
+}
+
 .navbar-primary {
     background-color: #333;
     bottom: 0px;
